@@ -1,0 +1,62 @@
+# IntelliJ IDEA
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+target/
+
+# Maven
+.mvn/
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# Gradle
+.gradle/
+build/
+!gradle-wrapper.jar
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
+# Spring Boot
+spring.log
+
+# Log files
+*.log
+
+# Temporary files
+*.swp
+*.swo
+*~
+*.tmp
+*.bak
+*.old
+*.orig
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+dist/
+build/
+env/
+venv/
+.venv/
+
+# PyCharm
+.idea/
+*.pyc
+.DS_Store
+*.pyo
+*.pyd
+*.pyd
+coverage.xml
+
+# Virtual environments
+pip-log.txt
+pip-delete-this-directory.txt
