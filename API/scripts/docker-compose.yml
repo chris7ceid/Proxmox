@@ -1,0 +1,27 @@
+version: '3.7'
+services:
+  postgres:
+    image: postgres:14.0
+    container_name: iris_db
+    environment:
+      - POSTGRES_USER=ceid
+      - POSTGRES_PASSWORD=ceid1234
+    logging:
+      options:
+        max-size: 10m
+        max-file: "3"
+    ports:
+      - '5438:5432'
+    volumes:
+      - ./createDB.sql:/docker-entrypoint-initdb.d/createDB.sql
+
+  api:
+    image: openjdk:17-jdk-slim
+    container_name: api_promox
+    volumes:
+      - ../target/Iris-1.0-SNAPSHOT.jar:/app/api.jar
+    command: [ "java", "-jar", "/app/api.jar" ]
+    depends_on:
+      - postgres
+    ports:
+      - '8080:8080'
