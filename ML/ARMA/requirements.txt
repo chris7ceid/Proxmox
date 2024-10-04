@@ -1,0 +1,6 @@
+pandas
+click
+requests
+matplotlib
+statsmodels
+scikit-learn
